@@ -20,11 +20,9 @@ const Home: NextPage = () => {
 
         <KeysSection />
         <PlansSection />
-        {/* Change the colour #f8fafc to match the previous section colour */}
         <SeparatorBottom />
         <ContantSection />
-        {/*Footer*/}
-        <PageFooter></PageFooter>
+        <PageFooter />
 
       </div>
 
