@@ -11,7 +11,7 @@ import ResumenSection from '../widgets/ResumeSection'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="min-h-screen flex-col items-center justify-center py-2">
       <div>
         <PageHeader />
         <InitSection />
@@ -22,7 +22,9 @@ const Home: NextPage = () => {
         <ResumenSection
           title='Que es Sinjury'
         />
-        <KeysSection />
+        <KeysSection
+          title='Elmentos Clave'
+        />
         <ResultSection
           title='Resultados Sinjury'
         />
