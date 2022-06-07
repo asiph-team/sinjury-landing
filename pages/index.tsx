@@ -6,6 +6,7 @@ import KeysSection from '../widgets/keysSection'
 import PageFooter from '../widgets/pageFooter'
 import PageHeader from '../widgets/pageHeader'
 import PlansSection from '../widgets/PlansSection'
+import ResultSection from '../widgets/ResultSection'
 import ResumenSection from '../widgets/ResumeSection'
 
 const Home: NextPage = () => {
@@ -14,12 +15,17 @@ const Home: NextPage = () => {
       <div>
         <PageHeader />
         <InitSection />
-        <Separator />
-
-        <ResumenSection />
-
+        <Separator
+          colorPrimary='#1b5e7d'
+          colorSecundary='#4a5593'
+        />
+        <ResumenSection
+          title='Que es Sinjury'
+        />
         <KeysSection />
-        <PlansSection />
+        <ResultSection
+          title='Resultados Sinjury'
+        />
         <SeparatorBottom />
         <ContantSection />
         <PageFooter />

@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-bg-color: #4a5593;
+  --secondary-bg-color: #1b5e7d;
+}
+
 .gradient {
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-  }
-  .gradientSinjury {
-    background: linear-gradient(90deg, #4a5593 0%, #1b5e7d 100%);
+    background: linear-gradient(90deg, var(--main-bg-color) 0%, var(--secondary-bg-color) 100%);
   }
