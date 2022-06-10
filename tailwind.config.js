@@ -5,7 +5,12 @@ module.exports = {
     './widgets/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "primary-color": "var(--main-bg-color)",
+        "secondary-color": "var(--secondary-bg-color)"
+      },
+    },
   },
   plugins: [],
 }
