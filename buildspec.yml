@@ -1,0 +1,24 @@
+version: 0.2
+env:
+  git-credential-helper: yes
+cache:
+  paths:
+    - '/root/.cache/pre-commit/**/*'
+    - '/root/.cache/pip/**/*'
+    - '/root/.ssh/ci_scripts'
+phases:
+  install:
+    runtime-versions:
+       nodejs: 14
+    commands:
+      - npm install next react react-dom
+  # pre_build:
+  #  commands:
+  #   - pre-commit run -a
+  build:
+    commands:
+      - next build
+  post_build:
+    commands:
+    
+      # Abortar si falla la fase build
