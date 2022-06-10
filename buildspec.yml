@@ -17,7 +17,7 @@ phases:
   #   - pre-commit run -a
   build:
     commands:
-      - next build
+      - npm run build
   post_build:
     commands:
 
