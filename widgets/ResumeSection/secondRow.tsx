@@ -7,7 +7,7 @@ interface Props {
   }
 const SecondRow = ( {title,description,footer,children}:Props) => {
     return (
-        <div className="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div className="flex flex-wrap flex-col-reverse sm:flex-row items-end">
         <div className="w-full sm:w-1/2 p-6 mt-6">
             {children}
         </div>
@@ -18,9 +18,6 @@ const SecondRow = ( {title,description,footer,children}:Props) => {
             </h3>
             <p className="text-gray-600 mb-8">
               {description}
-              <br />
-              <br />
-              <small>{footer}</small>
             </p>
           </div>
         </div>

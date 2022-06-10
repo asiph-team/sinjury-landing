@@ -4,12 +4,12 @@ import RightContent from './rigthContent'
 
 const InitSection = () => {
   return (
-    <div className="pt-24 gradient">
+    <div className="pt-24 gradient ">
       <div className="container px-3 mx-auto  flex flex-wrap flex-col md:flex-row items-center">
         <LeftContent
-          upperText="Sed ut perspiciatis unde omnis is"
-          mainText="Lorem Ipsum"
-          bottomText="ipsum quia dolor sit amet"
+          upperText="Gestión Digital"
+          mainText="MODELO SINJURY"
+          bottomText="La solución móvil y web para la prevención de riesgos"
           buttonText="Contactanos" />
         <RightContent image={mypic} />
       </div>
