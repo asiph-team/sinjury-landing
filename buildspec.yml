@@ -21,5 +21,5 @@ phases:
   post_build:
     commands:
       - zip eb_deployment.zip .next package.json
-      - aws s3 cp eb_deployment.zip s3://codepipeline-us-west-2-472569803885
+      - aws s3 cp eb_deployment.zip s3://codepipeline-us-west-2-472569803885/sinjury-website-code/
       # Abortar si falla la fase build
