@@ -15,16 +15,36 @@ const ResumenSection = ({title}:Props) => {
             <div className="w-full mb-4">
               <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
             </div>
-           <FirstRow title="nuevo titulo" description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magna' footer="pie de item">
-            {getSVGTravelWeb()}
+           <FirstRow 
+              title="Centro de control central"
+              description='Visualiza los indicadores de gestión de manera simple y clara. Permitiendo ver la información actualizada y resumida'
+              footer=""
+              >
+              {getSVGTravelWeb()}
             </FirstRow> 
            <SecondRow
-            title="nuevo titulo 2"
-            description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis'
-            footer='Sed ut perspiciatis unde omnis iste natus error sit v'
+            title="Evitar multas y sanciones"
+            description='Podras responder de forma rapida y exitosamente a fiscalizaciones, inspecciones y auditorías            '
+            footer=''
            >
              {getSVGGlobalWeb()}
            </SecondRow>
+           <FirstRow 
+              title="Reducir costos directos"
+              description='Mediante el modelo Sinjury podras garantizar que tus trabjadores estar resguardados de accidentes y enfermedades profesionales'
+              footer=""
+              >
+              {getSVGTravelWeb()}
+            </FirstRow> 
+
+           <SecondRow 
+              title="Transformación Digital"
+              description='Evita el exceso de trabajo administrativo, como el uso del papel y utiliza un sistema 100% digital.'
+              footer=""
+              >
+              {getSVGTravelWeb()}
+            </SecondRow> 
+          
           </div>
         </section>
     )
