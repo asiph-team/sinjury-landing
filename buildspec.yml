@@ -23,5 +23,6 @@ phases:
       - ls -la
 artifacts:
   files:
-    - ./**/*
+    - ./package.json
+    - ./.next
 
