@@ -29,4 +29,4 @@ phases:
       # Abortar si falla la fase build
 artifacts:
   files:
-    - ./deploy/*
+    - ./deploy/**/*
