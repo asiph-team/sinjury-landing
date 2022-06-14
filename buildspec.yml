@@ -21,8 +21,9 @@ phases:
   post_build:
     commands:
       # - zip -r eb_deployment.zip .next package.json
-      - mv .next deploy/.next
-      - mv package.json dpeloy/package.json
+      - mkdir deploy
+      - mv ./.next deploy/.next
+      - mv ./package.json dpeloy/package.json
       # - aws s3 cp eb_deployment.zip s3://codepipeline-us-west-2-472569803885/sinjury-website-code/SourceArti/
       # Abortar si falla la fase build
 artifacts:
