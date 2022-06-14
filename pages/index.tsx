@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           colorSecundary='#4a5593'
         />
         <ResumenSection
-          title='Beneficios TESTXX'
+          title='Beneficios'
         />
         <KeysSection
           title='Nuestro Modelo'
