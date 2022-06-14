@@ -20,6 +20,6 @@ phases:
       - npm run build
   post_build:
     commands:
-      - zip eb_deployment.zip .next package.json
+      - zip -r eb_deployment.zip .next package.json
       - aws s3 cp eb_deployment.zip s3://codepipeline-us-west-2-472569803885/sinjury-website-code/SourceArti/
       # Abortar si falla la fase build
