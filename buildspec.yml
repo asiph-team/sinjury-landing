@@ -20,15 +20,8 @@ phases:
       - npm run build
   post_build:
     commands:
-      # - zip -r eb_deployment.zip .next package.json
-      - mkdir deploy
-      - mv ./.next deploy/.next
-      - mv ./node_modules deploy/node_modules
-      - mv ./package.json deploy/package.json
-      - ls -la deploy
-      # - aws s3 cp eb_deployment.zip s3://codepipeline-us-west-2-472569803885/sinjury-website-code/SourceArti/
-      # Abortar si falla la fase build
+      - ls -la
 artifacts:
   files:
-    - ./deploy/**/*
+    - ./**/*
 
