@@ -8,7 +8,7 @@ const InitSection = () => {
       <div className="container px-3 mx-auto  flex flex-wrap flex-col md:flex-row items-center">
         <LeftContent
           upperText="Gestión Digital"
-          mainText="MODELO SINJURY"
+          mainText="MODELO SINJURY 2"
           bottomText="La solución móvil y web para la prevención de riesgos"
           buttonText="Contactanos" />
         <RightContent image={mypic} />
