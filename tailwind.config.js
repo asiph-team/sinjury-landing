@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         "primary-color": "var(--main-bg-color)",
-        "secondary-color": "var(--secondary-bg-color)"
+        "secondary-color": "var(--secondary-bg-color)",
+        "white-sinjury-color" :"var(--white-bg-color)"
       },
     },
   },

@@ -20,13 +20,13 @@ const Home: NextPage = () => {
           colorSecundary='#4a5593'
         />
         <ResumenSection
-          title='Sinjury'
+          title='Beneficios'
         />
         <KeysSection
-          title='Elmentos Clave'
+          title='Nuestro Modelo'
         />
         <ResultSection
-          title='Resultados Sinjury'
+          title='Desempeño Global'
         />
         <SeparatorBottom />
         <ContantSection />

@@ -9,16 +9,13 @@ const ResultSection = ({title}:Props) => {
     return (
         <section className="bg-white border-b py-8">
           <div className="container max-w-5xl mx-auto m-8">
-            <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-              {title}
-            </h1>
             <div className="w-full mb-4">
               <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
             </div>
            <SecondRow
-            title="nuevo titulo 2"
-            description='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis'
-            footer='Sed ut perspiciatis unde omnis iste natus error sit v'
+            title="Conoce tu desempeño global"
+            description='Con Sinjury podras conocer el desempeño global de tu empresa en tiempo real o para el rango de fechas que estimes conveniente'
+            footer=''
            >
              {getSVGGlobalWeb()}
            </SecondRow>
