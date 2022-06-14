@@ -26,4 +26,4 @@ phases:
       # Abortar si falla la fase build
 artifacts:
   files:
-    - ./
+    - ./eb_deployment.zip
