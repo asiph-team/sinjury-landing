@@ -5,7 +5,7 @@ interface Props{
   title: string;
 }
 
-const ResumenSection = ({title}:Props) => {
+const ResumenModelSinjury = ({title}:Props) => {
     return (
         <section className="bg-white border-b py-8">
           <div className="container max-w-5xl mx-auto m-8">
@@ -15,36 +15,141 @@ const ResumenSection = ({title}:Props) => {
             <div className="w-full mb-4">
               <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
             </div>
+            <div className='p-3  text-gray-600 mb-8 mt-5'>
+
+              <label>Nustro modelo  mediante la interaccion de las diferentes entidades de la empresa poder, generar un analisis diario de la situacion global de la empresa
+                en terminos de prevención
+              </label>
+            </div>
+            <h1 className="w-full mt-5 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+              Entidades
+            </h1>
+            <div className="w-full mb-4">
+              <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
+            </div>
            <FirstRow 
-              title="Centro de control central"
-              description='Visualiza los indicadores de gestión de manera simple y clara. Permitiendo ver la información actualizada y resumida'
+              title="Áreas de trabajo"
+              descriptions={[
+                'Crea y gestiona las areas de trabajo de tu empresa',
+                'Asigna a un responsable al area de trabajo',
+                'Vincula tus areas de trabajo con sectores, procesos relevantes, variables críticas de calidad, medioambiente, principales riesgos de seguridad, u otro aspecto relevante que considere necesario',
+              ]}
               footer=""
               >
               {getSVGTravelWeb()}
             </FirstRow> 
            <SecondRow
-            title="Evitar multas y sanciones"
-            description='Podras responder de forma rapida y exitosamente a fiscalizaciones, inspecciones y auditorías            '
+            title="Puestos de trabajo"
+
+            descriptions={[
+              'Crea y gestiona los puestos de trabajo y vinculalos a su area',
+              'Agregar una descripción del cargo, principales funciones, responsabilidades, competencias necesarias, principales riesgos de exposición',
+              'Agregar licencias requeridas, permisos, certificaciones, cursos, conocimientos',
+            ]}   
             footer=''
            >
              {getSVGGlobalWeb()}
            </SecondRow>
            <FirstRow 
-              title="Reducir costos directos"
-              description='Mediante el modelo Sinjury podras garantizar que tus trabjadores estar resguardados de accidentes y enfermedades profesionales'
+              title="Trabajadores"
+              descriptions={[
+                'Crea y gestiona a tus trabajadores y asignalos a sus puestos de trabajo',
+                'Disponibiliza la información de tus colaboradores como nombre, RUT, correo electrónico, dirección, teléfono de contacto, contacto de emergencia, estatura, talla, entre otros',
+              ]}   
               footer=""
               >
               {getSVGTravelWeb()}
             </FirstRow> 
 
            <SecondRow 
-              title="Transformación Digital"
-              description='Evita el exceso de trabajo administrativo, elimina el uso del papel y utiliza un sistema 100% digital.'
+              title="Inventario de riesgos de actividades "
+
+              descriptions={[
+                'Crear una actividad, asignando las medidas de control que el trabajador debe utilizar',
+                'El trabajador debe seleccionar la actividad que va a realizar, para verificar de forma efectiva las medidas de control.',
+                'El trabajador confirma el correcto inicio de su actividad, a través, de una firma digital',
+                'Al supervisor se le notificara la actividad realizada, permitiendo dejar registro si las medidas de control fueron efectivas y utilizadas',
+                'Se podra evaluar el riesgo (alto, medio o bajo) de la actividad permitiendo alertar el estado de esta en el modulo de planes de acción',
+              ]}
               footer=""
               >
               {getSVGTravelWeb()}
             </SecondRow> 
+            <h1 className="w-full mt-5 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+              Medidas de control
+            </h1>
+            <div className="w-full mb-4">
+              <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
+            </div>
           
+            <FirstRow 
+              title="Capacitaciones"
+              descriptions={[
+                'Crear las capacitaciones necesarias para que sus trabajadores adquieran los conocimientos, habilidades y experiencia que aseguren el desarrollo seguro de sus actividades',
+                'Asignar a sus trabajadores las capacitaciones, seleccionar la frecuencia en que se debe realizar.',
+                'Visualización de las capacitaciones, fechas, participación de sus trabajadores, ausencias, cursos pendientes, entre otros',
+              ]}
+              footer=""
+              >
+              {getSVGTravelWeb()}
+            </FirstRow> 
+           <SecondRow
+            title="Vigilancia medica"
+
+            descriptions={[
+              'Crear y asignar los respectivos exámenes médicos necesarios para cada trabajador',
+              'Agregar una descripción del motivo por el cuál el examen es necesario, trabajo en altura, espacios confinados, audiometrías, etc.',
+              'Administrar el cumplimiento de los programas de vigilancia médica por áreas, puestos de trabajo y trabajadores.',
+            ]}            footer=''
+           >
+             {getSVGGlobalWeb()}
+           </SecondRow>
+
+           <FirstRow 
+              title="Planes de acción"
+
+              descriptions={[
+                'Crear planes de acción, mejoras o proyectos',
+                'Gestiona tus areas de acción indicando resposables, prioridades y plazos',
+                'Administrar el cumplimiento de las distintas iniciativas provenientes de: Comités Paritarios, organismos administradores de la ley de accidentes del trabajo (mutualidades), entre otros.',
+              ]}
+              footer=""
+              >
+              {getSVGTravelWeb()}
+            </FirstRow> 
+           <SecondRow 
+              title="Supervisión"
+              descriptions={[
+                'Asignar la cantidad de acciones de supervisión en un mes',
+                'Analizar el cumplimiento y efectividad de las medidas de control',
+                'Visualizar las observaciones de actividades realizadas por la jefatura',
+              ]}
+              footer=""
+              >
+              {getSVGTravelWeb()}
+            </SecondRow> 
+
+
+            <h1 className="w-full mt-5 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+              Desempeño Global
+            </h1>
+            <div className="w-full mb-4">
+              <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
+            </div>
+            <div>
+            <ul className="list-disc">
+                 <li className="text-gray-600 mb-5 mt-5">
+                 Evalua el desempeño de la jefatura, en función del cumplimiento de los módulos de acción en un período de tiempo seleccionado
+                </li>
+                <li className="text-gray-600 mb-5 mt-5">
+                Evalua el desempeño por cada área de trabajo y jefatura respectiva.
+                </li>
+                <li>
+                Establece planes para la mejora del desempeño global de tu empresa.
+                </li>
+
+              </ul>
+              </div>
           </div>
         </section>
     )
@@ -141,5 +246,5 @@ const ResumenSection = ({title}:Props) => {
   </svg>
   )
   
-  export default ResumenSection
+  export default ResumenModelSinjury
   

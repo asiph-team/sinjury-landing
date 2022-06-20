@@ -31,33 +31,7 @@ const KeysSection = ({ title }: Props) => {
         </div>
       </div>
 
-      <div className="container w-9/12 mx-auto flex flex-wrap pt-4 pb-12">
 
-        <CardContainer
-          title="Inventario de Riesgo de Actividades"
-          upper=""
-          description="ur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor"
-        />
-      </div>
-      <div className="container w-9/12  mx-auto flex flex-wrap pb-12">
-        <div className="w-11/12 mb-4">
-        </div>
-        <CardContainer
-          title="Areas de trabajo"
-          upper=""
-          description="ur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor"
-        />
-        <CardContainer
-          title="Puestos de trabajo"
-          upper=""
-          description="ur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor"
-        />
-        <CardContainer
-          title="Trabajadores"
-          upper=""
-          description="ur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor"
-        />
-      </div>
       <div className="w-full flex justify-center text-center">
         <button className="mx-auto lg:mx-0 hover:underline bg-primary-color text-white font-bold rounded-full my-6 py-4 px-20 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ">
           Saber Mas
