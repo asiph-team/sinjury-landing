@@ -7,7 +7,7 @@ import ResumenSection from '../widgets/ResumeSection'
 
 const Sinjury: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen flex-col items-center justify-center pt-2">
       <div>
         <PageHeader></PageHeader>
         <Separator colorPrimary={''} colorSecundary={''} />
