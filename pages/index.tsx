@@ -20,10 +20,12 @@ const Home: NextPage = () => {
           colorPrimary='#1b5e7d'
           colorSecundary='#4a5593'
         />
-        <div className="text-center text-6xl sm:text-3xl px-10 pt-20 font-bold text-gray-500 opacity-85 ">
-          <label>
+        <div className="table-cell  align-middle">
+          <div className='text-center md:text-4xl  sm:text-lg px-10 py-50 font-bold text-gray-500 opacity-85'>
+          <p className='tracking-wides'>
             "Sistema web y aplicativo movil integrado para la prevención de riesgos de tu empresa de una forma simple, ágil y eficaz"
-          </label>
+          </p>
+        </div>
         </div>
         <ResumenSection
           title='Beneficios'
