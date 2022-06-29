@@ -47,11 +47,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={areas}
             />
-          </div>
         </FirstRow>
         <SecondRow
           title="Puestos de trabajo"
@@ -63,11 +61,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=''
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={workstation}
             />
-          </div>
         </SecondRow>
         <FirstRow
           title="Trabajadores"
@@ -77,11 +73,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={employees}
             />
-          </div>
         </FirstRow>
 
         <SecondRow
@@ -96,11 +90,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={activities}
             />
-          </div>
                   </SecondRow>
         <h1 className="w-full mt-5 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
           Medidas de control
@@ -118,11 +110,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={training}
             />
-          </div>
                   </FirstRow>
         <SecondRow
           title="Vigilancia medica"
@@ -133,11 +123,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
             'Administrar el cumplimiento de los programas de vigilancia médica por áreas, puestos de trabajo y trabajadores.',
           ]} footer=''
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={vigilancia_medica}
             />
-          </div> 
                  </SecondRow>
 
         <FirstRow
@@ -150,11 +138,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={action_plans}
             />
-          </div>
                   </FirstRow>
         <SecondRow
           title="Supervisión"
@@ -165,11 +151,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-          <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <Image
               src={supervisor}
             />
-          </div>
                   </SecondRow>
 
 
