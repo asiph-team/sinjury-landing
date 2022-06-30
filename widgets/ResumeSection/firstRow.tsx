@@ -1,4 +1,6 @@
 import { Children } from "react"
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 interface Props {
   children: JSX.Element[] | JSX.Element,
   title: string,
@@ -8,6 +10,11 @@ interface Props {
 const firstRow = ({ title, description, footer, children }: Props) => {
 
   return (
+    <AnimationOnScroll
+    animateOnce={true}
+
+      duration={0.5}
+      animateIn="animate__fadeInLeft">
     <div className="flex flex-wrap  justify-center items-end">
       <div className="w-5/6 sm:w-1/2 p-6">
 
@@ -22,6 +29,7 @@ const firstRow = ({ title, description, footer, children }: Props) => {
         {children}
       </div>
     </div>
+    </AnimationOnScroll>
   )
 }
 

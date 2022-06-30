@@ -4,6 +4,7 @@ import centralPanel from '../../public/assets/svg/central_panel.svg'
 import chart from '../../public/assets/svg/chart.svg'
 import reduce_cost from '../../public/assets/svg/reduce_cost.svg'
 import transformation from '../../public/assets/svg/transformation.svg'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 interface Props {
   title: string;
@@ -19,15 +20,17 @@ const ResumenSection = ({ title }: Props) => {
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
         </div>
-        <FirstRow
-          title="Centro de control"
-          description='Visualiza los indicadores de gestión de manera simple y clara. Permitiendo ver la información actualizada y resumida'
-          footer=""
-        >
-          <div className="py-3 px-5 my-2">
-            <img className="object-cover h-65" src={centralPanel.src} ></img>
-          </div>
-        </FirstRow>
+        <AnimationOnScroll animateIn="animate__bounceIn" animateOnce={true}>
+          <FirstRow
+            title="Centro de control"
+            description='Visualiza los indicadores de gestión de manera simple y clara. Permitiendo ver la información actualizada y resumida'
+            footer=""
+          >
+            <div className="py-3 px-5 my-2">
+              <img className="object-cover h-65" src={centralPanel.src} ></img>
+            </div>
+          </FirstRow>
+        </AnimationOnScroll>
         <SecondRow
           title="Evitar multas y sanciones"
           description='Podras responder de forma rapida y exitosamente a fiscalizaciones, inspecciones y auditorías            '
@@ -55,7 +58,7 @@ const ResumenSection = ({ title }: Props) => {
           <div className="">
             <img className="object-cover h-65" src={transformation.src} ></img>
           </div>
-                  </SecondRow>
+        </SecondRow>
 
       </div>
     </section>
