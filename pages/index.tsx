@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Separator, SeparatorBottom } from '../components/Separator'
 import ContantSection from '../widgets/contactSection'
 import InitSection from '../widgets/InitSection'
@@ -22,9 +23,14 @@ const Home: NextPage = () => {
         />
         <div className="table-cell align-middle h-80">
           <div className='text-center px-10 font-bold text-gray-500 opacity-85'>
-            <p className='text-3xl py-10 tracking-wide'>
+          <AnimationOnScroll
+    animateOnce={true}
+    duration={0.5}
+    animateIn="animate__headShake">
+                  <p className='text-3xl py-10 tracking-wide'>
               "Sistema web y aplicativo movil integrado para la prevención de riesgos de tu empresa de una forma simple, ágil y eficaz"
             </p>
+            </AnimationOnScroll>
           </div>
         </div>
         <ResumenSection

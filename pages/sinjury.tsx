@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import { Separator } from '../components/Separator'
+import InitModelSinjury from '../widgets/InitModelSinjury'
+import InitSection from '../widgets/InitSection'
 import PageFooter from '../widgets/pageFooter'
 import PageHeader from '../widgets/pageHeader'
 import ResumenModelSinjury from '../widgets/ResumenModelSinjury'
@@ -10,6 +12,8 @@ const Sinjury: NextPage = () => {
     <div className="min-h-screen flex-col items-center justify-center py-2">
       <div>
         <PageHeader />
+        <InitModelSinjury />
+
         <Separator colorPrimary={''} colorSecundary={''} />
 
         <ResumenModelSinjury title="Modelo Sinjury"/>

@@ -20,21 +20,18 @@ const ResumenModelSinjury = ({ title }: Props) => {
   return (
     <section className="bg-white border-b py-8">
       <div className="container max-w-5xl mx-auto m-8">
-        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          {title}
-        </h1>
+        <div className="my-10">
         <div className="w-full mb-4">
-          <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
         </div>
         <div className='p-3  text-gray-600 mb-8 mt-5'>
-
-          <label>Nustro modelo  mediante la interaccion de las diferentes entidades de la empresa poder, generar un analisis diario de la situacion global de la empresa
-            en terminos de prevención
-          </label>
+     
         </div>
-        <h1 className="w-full mt-5 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
-          Entidades
+        
+        </div>
+        <h1 className="w-full my-2 mt-5 text-4xl font-bold leading-tight text-center text-gray-800">
+          Administra 
         </h1>
+        
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
         </div>
@@ -48,6 +45,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           footer=""
         >
             <Image
+             quality={10}
               src={areas}
             />
         </FirstRow>
@@ -94,8 +92,8 @@ const ResumenModelSinjury = ({ title }: Props) => {
               src={activities}
             />
                   </SecondRow>
-        <h1 className="w-full mt-5 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
-          Medidas de control
+        <h1 className="w-full mt-20 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+          Controla las medidas Prevención
         </h1>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />

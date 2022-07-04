@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 interface Props {
   children: JSX.Element[] | JSX.Element,
@@ -9,7 +10,12 @@ const SecondRow = ({ title, descriptions, footer, children }: Props) => {
   return (
     <div className="flex flex-wrap flex-col-reverse sm:flex-row items-end">
       <div className="w-full sm:w-1/2 p-6 mt-6">
+      <AnimationOnScroll
+    animateOnce={true}
+    duration={0.5}
+    animateIn="animate__fadeInLeft">
         {children}
+        </AnimationOnScroll>
       </div>
       <div className="w-full sm:w-1/2 p-6 mt-6">
         <div className="align-middle">

@@ -12,7 +12,7 @@ const SecondRow = ( {title,description,footer,children}:Props) => {
     <AnimationOnScroll
     animateOnce={true}
     duration={0.5}
-    animateIn="animate__fadeInLeft">
+    animateIn="animate__fadeInRight">
         <div className="flex flex-wrap flex-col-reverse sm:flex-row items-end">
         <div className="w-full sm:w-1/2 p-6 mt-6">
             {children}

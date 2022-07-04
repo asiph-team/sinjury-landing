@@ -1,4 +1,5 @@
 import { Children } from "react"
+import { AnimationOnScroll } from "react-animation-on-scroll";
 interface Props {
   children: JSX.Element[] | JSX.Element,
   title: string,
@@ -8,7 +9,7 @@ interface Props {
 const firstRow = ({ title, descriptions, footer, children }: Props) => {
 
   return (
-    <div className="flex flex-wrap  justify-center items-end">
+    <div className="flex flex-wrap  justify-center items-end my-20">
       <div className="w-5/6 sm:w-5/12 p-3">
 
         <h3 className="text-3xl text-gray-800 font-bold leading-none">
@@ -25,10 +26,15 @@ const firstRow = ({ title, descriptions, footer, children }: Props) => {
         </ul>
       </div>
       <div className="w-full sm:w-7/12 p-3">
-      <div  className="shadow-2xl rounded-lg">
+        <AnimationOnScroll
+          animateOnce={true}
+          duration={0.5}
+          animateIn="animate__fadeInRight">
+          <div className="shadow-2xl rounded-lg">
+            {children}
+          </div>
+        </AnimationOnScroll>
 
-        {children}
-        </div>
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const TestimonialsSection = () => {
   return (
@@ -10,6 +11,10 @@ const TestimonialsSection = () => {
         <div className="w-full mb-4 py-3">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
         </div>
+        <AnimationOnScroll
+    animateOnce={true}
+    duration={0.5}
+    animateIn="animate__fadeInDown">
         <div className="lg:grid lg:grid-cols-3 lg:gap-x-2">
           <div className="p-4 text-gray-800 rounded-lg shadow-md">
             <div className="mb-2">
@@ -54,7 +59,7 @@ const TestimonialsSection = () => {
             </div>
           </div>
         </div>
-
+</AnimationOnScroll>
       </div>
     </section>
   )
