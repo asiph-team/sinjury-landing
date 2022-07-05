@@ -154,9 +154,8 @@ const ResumenModelSinjury = ({ title }: Props) => {
               src={supervisor}
             />
                   </SecondRow>
-
-
-        <h1 className="w-full mt-5 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+          
+        <h1 className="w-full my-2  mt-20  text-4xl font-bold leading-tight text-center text-gray-800">
           Desempeño Global
         </h1>
         <div className="w-full mb-4">
@@ -170,7 +169,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
             <li className="text-gray-600 mb-5 mt-5">
               Evalúa el desempeño por cada área de trabajo y jefatura respectiva.
             </li>
-            <li>
+            <li className="text-gray-600 mb-5 mt-5">
               Establece planes para la mejora del desempeño global de tu empresa.
             </li>
 

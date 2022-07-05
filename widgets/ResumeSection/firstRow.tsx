@@ -15,9 +15,8 @@ const firstRow = ({ title, description, footer, children }: Props) => {
 
       duration={0.5}
       animateIn="animate__fadeInLeft">
-    <div className="flex flex-wrap  justify-center items-end">
+    <div className="flex flex-wrap  justify-center items-center">
       <div className="w-5/6 sm:w-1/2 p-6">
-
         <h3 className="text-3xl text-gray-800 font-bold leading-none">
           {title}
         </h3>

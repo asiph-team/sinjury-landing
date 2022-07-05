@@ -8,13 +8,16 @@ interface Props {
 }
 const SecondRow = ({ title, descriptions, footer, children }: Props) => {
   return (
-    <div className="flex flex-wrap flex-col-reverse sm:flex-row items-end">
+    <div className="flex flex-wrap flex-col-reverse sm:flex-row items-center">
       <div className="w-full sm:w-1/2 p-6 mt-6">
       <AnimationOnScroll
     animateOnce={true}
     duration={0.5}
     animateIn="animate__fadeInLeft">
+                <div className="shadow-2xl rounded-lg">
+
         {children}
+        </div>
         </AnimationOnScroll>
       </div>
       <div className="w-full sm:w-1/2 p-6 mt-6">
