@@ -22,7 +22,10 @@ const Sinjury: NextPage = () => {
         <Separator colorPrimary={''} colorSecundary={''} />
 
         <ResumenModelSinjury title="Modelo Sinjury"/>
-        <Separator colorPrimary={''} colorSecundary={''} />
+        <Separator
+          colorPrimary='#1b5e7d'
+          colorSecundary='#4a5593'
+        />
         <PageFooter></PageFooter>
 
       </div>

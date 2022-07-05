@@ -11,6 +11,7 @@ import vigilancia_medica from "../../public/assets/img/medica.png"
 import supervisor from "../../public/assets/img/supervision.png"
 import training from "../../public/assets/img/trainings.png"
 import workstation from "../../public/assets/img/workstation.png"
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
 interface Props {
   title: string;
@@ -18,7 +19,7 @@ interface Props {
 
 const ResumenModelSinjury = ({ title }: Props) => {
   return (
-    <section className="bg-white border-b py-8">
+    <section className="bg-white py-8">
       <div className="container max-w-5xl mx-auto m-8">
         <div className="my-10">
         <div className="w-full mb-4">
@@ -172,9 +173,26 @@ const ResumenModelSinjury = ({ title }: Props) => {
             <li className="text-gray-600 mb-5 mt-5">
               Establece planes para la mejora del desempeño global de tu empresa.
             </li>
-
           </ul>
         </div>
+        <div>
+          <div className="flex w-full  justify-center items-center">
+        <div className="w-4/5 p-6 mt-6">
+      <AnimationOnScroll
+    animateOnce={true}
+    duration={0.5}
+    animateIn="animate__slideInUp">
+                <div className="shadow-2xl rounded-lg">
+
+
+                <Image
+              src={indicadorGlobal}
+            />
+                          </div>
+        </AnimationOnScroll>
+      </div>
+        </div>
+      </div>
       </div>
     </section>
   )

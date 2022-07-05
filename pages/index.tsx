@@ -45,6 +45,10 @@ const Home: NextPage = () => {
 
         <SeparatorBottom />
         <ContantSection />
+        <Separator
+          colorPrimary='#1b5e7d'
+          colorSecundary='#4a5593'
+        />
         <PageFooter />
 
       </div>
