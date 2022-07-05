@@ -1,6 +1,7 @@
 import modelSinjury from '../../public/assets/img/modelo_sinjury.png'
 import CardContainer from "./cardContainer"
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 
 interface Props {
   title: string,
@@ -33,9 +34,12 @@ const KeysSection = ({ title }: Props) => {
 
 
       <div className="w-full flex justify-center text-center">
+      <Link href="/sinjury">
+
         <button className="mx-auto lg:mx-0 hover:underline bg-primary-color text-white font-bold rounded-full my-6 py-4 px-20 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ">
           Saber más
         </button>
+        </Link>
       </div>
 
 
