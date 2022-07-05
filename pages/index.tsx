@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     duration={0.5}
     animateIn="animate__headShake">
                   <p className='text-3xl py-10 tracking-wide'>
-              "Sistema web y aplicativo movil integrado para la prevención de riesgos de tu empresa de una forma simple, ágil y eficaz"
+              Plataforma web y aplicación móvil integradas para la prevención de riesgos de tu empresa, de una forma simple, ágil y eficaz
             </p>
             </AnimationOnScroll>
           </div>
