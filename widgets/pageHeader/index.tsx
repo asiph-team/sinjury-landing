@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import { HeaderTitle } from '../../components/HeaderTitle'
 
-const PageHeader = () => {
+interface Props {
+  index: number
+}
+const PageHeader = ({index}:Props)  => {
   return (
     <nav id="header" className="fixed w-full z-30 top-0 gradient text-white">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -25,13 +28,13 @@ const PageHeader = () => {
             <HeaderTitle
               title='Inicio'
               route='/'
-              isBold={true}
+              isBold={index==1}
             />
             <li className="mr-3">
             <HeaderTitle
               title='Modelo Sinjury'
               route='/sinjury'
-              isBold={false}
+              isBold={index==2}
             />
             </li>
             

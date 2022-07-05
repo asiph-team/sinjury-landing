@@ -11,16 +11,11 @@ const InitModelSinjury = () => {
         <LeftContent
           upperText=""
           mainText="Modelo Sinjury"
-          bottomText=""
+          bottomText="Mediante la interacción de las diferentes entidades de la empresa, genera un análisis diario de la situación global de tu empresa
+          en términos de prevención."
           buttonText="Contactanos" />
         <RightContent image={model_sinjury} />
       </div>
-      <div className='container px-3 mx-auto  pt-4 flex flex-wrap flex-col md:flex-row items-center'>
-              <p className="leading-normal text-2xl mb-8 text-white">
-              Mediante la interacción de las diferentes entidades de la empresa, genera un análisis diario de la situación global de tu empresa
-            en términos de prevención.
-            </p>
-                  </div>
     </div>
   )
 }
