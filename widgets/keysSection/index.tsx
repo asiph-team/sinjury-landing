@@ -17,7 +17,7 @@ const KeysSection = ({ title }: Props) => {
         </div>
         <div className="w-full flex justify-center text-center">
           <div className='p-3 lg:w-6/12  sm:w-10/12  text-gray-600 mb-8 mt-5'>
-            <label>El modelo Sinjury consiste en la utilización del inventario de riesgos como herramienta de gestión fundamental para la prevención eficaz de accidentes y enfermedades profesionales
+            <label>El modelo Sinjury consiste en la utilización del inventario de riesgos como herramienta de gestión fundamental para la prevención eficaz de accidentes y enfermedades profesionales.
             </label>
           </div>
         </div>
@@ -34,7 +34,7 @@ const KeysSection = ({ title }: Props) => {
 
       <div className="w-full flex justify-center text-center">
         <button className="mx-auto lg:mx-0 hover:underline bg-primary-color text-white font-bold rounded-full my-6 py-4 px-20 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ">
-          Saber Mas
+          Saber más
         </button>
       </div>
 

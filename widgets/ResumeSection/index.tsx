@@ -23,7 +23,7 @@ const ResumenSection = ({ title }: Props) => {
         <AnimationOnScroll animateIn="animate__bounceIn" animateOnce={true}>
           <FirstRow
             title="Centro de control"
-            description='Visualiza los indicadores de gestión de manera simple y clara. Permitiendo ver la información actualizada y resumida'
+            description='Visualiza los indicadores de gestión de riesgo de manera simple y clara. Para tomar las decisiones necesarias en el momento requerido.'
             footer=""
           >
             <div className="py-3 px-5 my-2">
@@ -32,8 +32,8 @@ const ResumenSection = ({ title }: Props) => {
           </FirstRow>
         </AnimationOnScroll>
         <SecondRow
-          title="Evitar multas y sanciones"
-          description='Podras responder de forma rapida y exitosamente a fiscalizaciones, inspecciones y auditorías            '
+          title="Evita multas y sanciones"
+          description='Podrás responder de forma rápida y exitosa a fiscalizaciones, inspecciones y auditorías.'
           footer=''
         >
           <div className="">
@@ -41,8 +41,8 @@ const ResumenSection = ({ title }: Props) => {
           </div>
         </SecondRow>
         <FirstRow
-          title="Reducir costos directos"
-          description='Mediante el modelo Sinjury podras garantizar que tus trabjadores estar resguardados de accidentes y enfermedades profesionales'
+          title="Reduce costos directos"
+          description='Mediante el modelo Sinjury podrás garantizar que tus trabjadores estén resguardados de accidentes y enfermedades profesionales.'
           footer=""
         >
           <div className="">

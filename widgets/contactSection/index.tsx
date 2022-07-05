@@ -10,7 +10,7 @@ const ContantSection = () => {
                     <div>
                         <h2 className="text-4xl lg:text-5xl font-bold leading-tight"> Solicita tu prueba </h2>
                         <div className="text-gray-700 mt-8">
-                           Indicanos tu <span className="underline">email o telefono</span> y te daremos acceso. 
+                           Indícanos tu <span className="underline">email o teléfono</span> para que pruebes con nosotros. 
                         </div>
                     </div>
                     <div className="mt-8 text-center">

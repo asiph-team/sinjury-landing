@@ -9,8 +9,8 @@ const InitSection = () => {
         <LeftContent
           upperText=""
           mainText="SINJURY"
-          bottomText="La solución móvil y web para la prevención de riesgos"
-          buttonText="Contactanos" />
+          bottomText="La solución móvil y web para Prevención de Riesgos"
+          buttonText="Contáctanos" />
         <RightContent image={mypic} />
       </div>
     </div>
