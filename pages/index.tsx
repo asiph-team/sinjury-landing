@@ -44,7 +44,6 @@ const Home: NextPage = () => {
         <TestimonialsSection />
 
         <SeparatorBottom />
-        <ContantSection />
         <Separator
           colorPrimary='#1b5e7d'
           colorSecundary='#4a5593'
