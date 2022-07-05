@@ -8,7 +8,7 @@ import PageFooter from '../widgets/pageFooter'
 import PageHeader from '../widgets/pageHeader'
 import TestimonialsSection from '../widgets/PlansSection'
 import PlansSection from '../widgets/PlansSection'
-import ResultSection from '../widgets/ResultSection'
+import Link from "next/link";
 import ResumenSection from '../widgets/ResumeSection'
 
 const Home: NextPage = () => {
