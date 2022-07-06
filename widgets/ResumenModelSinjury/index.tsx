@@ -54,7 +54,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           title="Puestos de trabajo"
 
           descriptions={[
-            'Crea y gestiona los puestos de trabajo y vincúlalos a su area',
+            'Crea y gestiona los puestos de trabajo y vincúlalos a su área',
             'Agrega una descripción del cargo, funciones, responsabilidades, competencias necesarias y principales riesgos de exposición',
             'Agrega licencias requeridas, permisos, certificaciones, cursos, conocimientos',
           ]}
@@ -81,10 +81,10 @@ const ResumenModelSinjury = ({ title }: Props) => {
           title="Inventario de riesgos de actividades"
 
           descriptions={[
-            'Crea una actividades, asignando las medidas de control que el trabajador debe utilizar',
+            'Crea actividades, asignando las medidas de control que el trabajador debe utilizar',
             'El trabajador debe seleccionar la actividad que va a realizar, para verificar de forma efectiva las medidas de control.',
             'El trabajador confirma el correcto inicio de su actividad, a través, de una firma digital',
-            'Al supervisor se le notificara la actividad realizada, permitiendo dejar registro si las medidas de control fueron efectivas y utilizadas',
+            'Al supervisor se le notificará la actividad realizada, permitiendo dejar registro si las medidas de control fueron efectivas y utilizadas',
             'Se podrá evaluar el riesgo (alto, medio o bajo) de la actividad permitiendo alertar el estado de esta en el modulo de planes de acción',
             'El propio trabajador es quien evalúa el riesgo de su actividad, permitiendo alertar e informar, dejando registro de las medidas de control que fallan o que falten para mejorar el nivel de riesgo'
           ]}
@@ -133,7 +133,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
 
           descriptions={[
             'Crear planes de acción, mejoras o proyectos',
-            'Gestiona tus areas de acción indicando resposables, prioridades y plazos',
+            'Gestiona tus áreas de acción indicando responsables, prioridades y plazos',
             'Administra el cumplimiento de las distintas iniciativas provenientes de: Comités Paritarios, organismos administradores de la ley de accidentes del trabajo (mutualidades), entre otros.',
           ]}
           footer=""
