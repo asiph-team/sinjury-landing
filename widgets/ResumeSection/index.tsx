@@ -23,7 +23,7 @@ const ResumenSection = ({ title }: Props) => {
         <AnimationOnScroll animateIn="animate__bounceIn" animateOnce={true}>
           <FirstRow
             title="Centro de control"
-            description='Visualiza los indicadores de gestión de riesgo de manera simple y clara. Para tomar las decisiones necesarias en el momento requerido.'
+            description='Visualiza los indicadores de gestión de riesgo de manera simple y clara, para tomar las decisiones necesarias en el momento requerido.'
             footer=""
           >
             <div className="py-3 px-5 my-2">
