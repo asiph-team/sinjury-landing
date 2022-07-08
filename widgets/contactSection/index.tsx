@@ -8,7 +8,6 @@ const ContantSection = () => {
     const [recaptcha, setRecaptchaValue] = useState("");
 
     const sendEmail = () => {
-        console.log("enviando");
         const btnSend = document.getElementById('btn-send') as HTMLButtonElement;
         btnSend.classList.remove('bg-white');
         btnSend.classList.add('bg-gray-200');
@@ -89,6 +88,10 @@ const ContantSection = () => {
 
         if (inputPhone.value.trim() != "" && !validatePhone(inputPhone.value.trim())) {
             errorPhone!.innerHTML = 'El teléfono ingresado no es valido';
+            return false;
+        }
+        if (recaptcha.trim() == ""){
+            errorPhoneMail!.innerHTML = 'Ups, debes verificar que no eres un robot.';
             return false;
         }
 
