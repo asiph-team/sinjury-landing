@@ -7,10 +7,21 @@ import { useState } from 'react';
 const ContantSection = () => {
     const [recaptcha, setRecaptchaValue] = useState("");
 
+    const btnSend = typeof window !== 'undefined' ? document.getElementById('btn-send') as HTMLButtonElement : null;
+
+    const inputName: HTMLInputElement|null =  typeof window !== 'undefined' ? document.getElementById('input-name') as HTMLInputElement : null;
+    const inputEmail: HTMLInputElement|null =  typeof window !== 'undefined' ? document.getElementById('input-email') as HTMLInputElement : null;
+    const inputPhone: HTMLInputElement|null =  typeof window !== 'undefined' ? document.getElementById('input-phone') as HTMLInputElement : null;
+    const inputMsg: HTMLInputElement|null =  typeof window !== 'undefined' ? document.getElementById('input-msg') as HTMLInputElement : null;
+
+    const errorName = typeof window !== 'undefined' ?  document.getElementById('error-input-name') : null;
+    const errorEmail = typeof window !== 'undefined' ?  document.getElementById('error-input-email') : null;
+    const errorPhone =  typeof window !== 'undefined' ? document.getElementById('error-input-phone') : null;
+    const errorPhoneMail =  typeof window !== 'undefined' ? document.getElementById('error-input-phone-email') : null;
+
     const sendEmail = () => {
-        const btnSend = document.getElementById('btn-send') as HTMLButtonElement;
-        btnSend.classList.remove('bg-white');
-        btnSend.classList.add('bg-gray-200');
+        btnSend!.classList.remove('bg-primary-color');
+        btnSend!.classList.add('bg-gray-200');
 
         btnSend!.disabled = true
         if (validateForm()) {
@@ -22,71 +33,63 @@ const ContantSection = () => {
 
                     btnSuccess!.classList.remove('hidden');
 
+                    inputName!.disabled = true;
+                    inputEmail!.disabled = true;
+                    inputPhone!.disabled = true;
+                    inputMsg!.disabled = true;
 
-                    const inputName: HTMLInputElement = document.getElementById('input-name') as HTMLInputElement;
-                    const inputEmail: HTMLInputElement = document.getElementById('input-email') as HTMLInputElement;
-                    const inputPhone: HTMLInputElement = document.getElementById('input-phone') as HTMLInputElement;
-                    const inputMsg: HTMLInputElement = document.getElementById('input-msg') as HTMLInputElement;
-
-                    inputName.disabled = true;
-                    inputEmail.disabled = true;
-                    inputPhone.disabled = true;
-                    inputMsg.disabled = true;
-
-                    inputName.classList.remove('bg-white');
-                    inputName.classList.add('bg-gray-200');
+                    inputName!.classList.remove('bg-white');
+                    inputName!.classList.add('bg-gray-200');
                     
-                    inputEmail.classList.remove('bg-white');
-                    inputEmail.classList.add('bg-gray-200');
+                    inputEmail!.classList.remove('bg-white');
+                    inputEmail!.classList.add('bg-gray-200');
                     
-                    inputPhone.classList.remove('bg-white');
-                    inputPhone.classList.add('bg-gray-200');
+                    inputPhone!.classList.remove('bg-white');
+                    inputPhone!.classList.add('bg-gray-200');
                     
-                    inputMsg.classList.remove('bg-white');
-                    inputMsg.classList.add('bg-gray-200');
+                    inputMsg!.classList.remove('bg-white');
+                    inputMsg!.classList.add('bg-gray-200');
 
 
                 }, (err) => {
                     const errorPhoneMail = document.getElementById('error-input-phone-email')
                     errorPhoneMail!.innerHTML = 'Se ha producido un error, por favor';
                     btnSend!.disabled = false;
-                    btnSend.classList.remove('bg-gray-200');
-                    btnSend.classList.add('bg-white');
+                    btnSend!.classList.remove('bg-gray-200');
+                    btnSend!.classList.add('bg-primary-color');
 
                 });
+        }
+        else{
+
+            btnSend!.disabled = false;
+            btnSend!.classList.remove('bg-gray-200');
+            btnSend!.classList.add('bg-primary-color');
         }
     }
 
     const validateForm = () => {
-        const inputName: HTMLInputElement = document.getElementById('input-name') as HTMLInputElement;
-        const inputEmail: HTMLInputElement = document.getElementById('input-email') as HTMLInputElement;
-        const inputPhone: HTMLInputElement = document.getElementById('input-phone') as HTMLInputElement;
-
-        const errorName = document.getElementById('error-input-name');
-        const errorEmail = document.getElementById('error-input-email');
-        const errorPhone = document.getElementById('error-input-phone');
-        const errorPhoneMail = document.getElementById('error-input-phone-email')
 
         errorName!.innerHTML = "";
         errorEmail!.innerHTML = "";
         errorPhone!.innerHTML = "";
         errorPhoneMail!.innerHTML = "";
 
-        if (inputName.value.trim() === "") {
+        if (inputName!.value.trim() === "") {
             errorName!.innerHTML = 'Por favor, indicanos tu nombre';
             return false;
         }
-        if (inputEmail.value.trim() === "" && inputPhone.value.trim() == "") {
+        if (inputEmail!.value.trim() === "" && inputPhone!.value.trim() == "") {
             errorPhoneMail!.innerHTML = 'Por favor, indicanos tu email o teléfono';
             return false;
         }
 
-        if (inputEmail.value.trim() != "" && !validateEmail(inputEmail.value.trim())) {
+        if (inputEmail!.value.trim() != "" && !validateEmail(inputEmail!.value.trim())) {
             errorEmail!.innerHTML = 'El email ingresado no es valido';
             return false;
         }
 
-        if (inputPhone.value.trim() != "" && !validatePhone(inputPhone.value.trim())) {
+        if (inputPhone!.value.trim() != "" && !validatePhone(inputPhone!.value.trim())) {
             errorPhone!.innerHTML = 'El teléfono ingresado no es valido';
             return false;
         }
@@ -111,16 +114,11 @@ const ContantSection = () => {
 
     const getParamsMsg = () => {
 
-        const inputName: HTMLInputElement = document.getElementById('input-name') as HTMLInputElement;
-        const inputEmail: HTMLInputElement = document.getElementById('input-email') as HTMLInputElement;
-        const inputPhone: HTMLInputElement = document.getElementById('input-phone') as HTMLInputElement;
-        const inputMsg: HTMLInputElement = document.getElementById('input-msg') as HTMLInputElement;
-
         return {
-            name: inputName.value,
-            email: inputEmail.value,
-            phone: inputPhone.value,
-            message: inputMsg.value,
+            name: inputName!.value,
+            email: inputEmail!.value,
+            phone: inputPhone!.value,
+            message: inputMsg!.value,
             'g-recaptcha-response': recaptcha
         }
     }
