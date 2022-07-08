@@ -1,8 +1,130 @@
 import mypic from '../../public/assets/img/hero.png'
 import Image from 'next/image'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
+import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const ContantSection = () => {
+    const [recaptcha, setRecaptchaValue] = useState("");
+
+    const sendEmail = () => {
+        console.log("enviando");
+        const btnSend = document.getElementById('btn-send') as HTMLButtonElement;
+        btnSend.classList.remove('bg-white');
+        btnSend.classList.add('bg-gray-200');
+
+        btnSend!.disabled = true
+        if (validateForm()) {
+            emailjs.send('rfar6BJoT3GH3WusolSEbg', 'template_0xy9mee', getParamsMsg(), 'vQOmnEPK7J9joDwkd')
+                .then((response) => {
+                    const btnSend = document.getElementById('btn-send');
+                    const btnSuccess = document.getElementById('btn-success');
+                    btnSend!.parentNode!.removeChild(btnSend!);
+
+                    btnSuccess!.classList.remove('hidden');
+
+
+                    const inputName: HTMLInputElement = document.getElementById('input-name') as HTMLInputElement;
+                    const inputEmail: HTMLInputElement = document.getElementById('input-email') as HTMLInputElement;
+                    const inputPhone: HTMLInputElement = document.getElementById('input-phone') as HTMLInputElement;
+                    const inputMsg: HTMLInputElement = document.getElementById('input-msg') as HTMLInputElement;
+
+                    inputName.disabled = true;
+                    inputEmail.disabled = true;
+                    inputPhone.disabled = true;
+                    inputMsg.disabled = true;
+
+                    inputName.classList.remove('bg-white');
+                    inputName.classList.add('bg-gray-200');
+                    
+                    inputEmail.classList.remove('bg-white');
+                    inputEmail.classList.add('bg-gray-200');
+                    
+                    inputPhone.classList.remove('bg-white');
+                    inputPhone.classList.add('bg-gray-200');
+                    
+                    inputMsg.classList.remove('bg-white');
+                    inputMsg.classList.add('bg-gray-200');
+
+
+                }, (err) => {
+                    const errorPhoneMail = document.getElementById('error-input-phone-email')
+                    errorPhoneMail!.innerHTML = 'Se ha producido un error, por favor';
+                    btnSend!.disabled = false;
+                    btnSend.classList.remove('bg-gray-200');
+                    btnSend.classList.add('bg-white');
+
+                });
+        }
+    }
+
+    const validateForm = () => {
+        const inputName: HTMLInputElement = document.getElementById('input-name') as HTMLInputElement;
+        const inputEmail: HTMLInputElement = document.getElementById('input-email') as HTMLInputElement;
+        const inputPhone: HTMLInputElement = document.getElementById('input-phone') as HTMLInputElement;
+
+        const errorName = document.getElementById('error-input-name');
+        const errorEmail = document.getElementById('error-input-email');
+        const errorPhone = document.getElementById('error-input-phone');
+        const errorPhoneMail = document.getElementById('error-input-phone-email')
+
+        errorName!.innerHTML = "";
+        errorEmail!.innerHTML = "";
+        errorPhone!.innerHTML = "";
+        errorPhoneMail!.innerHTML = "";
+
+        if (inputName.value.trim() === "") {
+            errorName!.innerHTML = 'Por favor, indicanos tu nombre';
+            return false;
+        }
+        if (inputEmail.value.trim() === "" && inputPhone.value.trim() == "") {
+            errorPhoneMail!.innerHTML = 'Por favor, indicanos tu email o teléfono';
+            return false;
+        }
+
+        if (inputEmail.value.trim() != "" && !validateEmail(inputEmail.value.trim())) {
+            errorEmail!.innerHTML = 'El email ingresado no es valido';
+            return false;
+        }
+
+        if (inputPhone.value.trim() != "" && !validatePhone(inputPhone.value.trim())) {
+            errorPhone!.innerHTML = 'El teléfono ingresado no es valido';
+            return false;
+        }
+
+        return true;
+    }
+
+    const validateEmail = (email: string) => {
+        const re: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    const validatePhone = (phone: string) => {
+        const re: RegExp = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
+        return re.test(String(phone).toLowerCase());
+    }
+
+
+    const getParamsMsg = () => {
+
+        const inputName: HTMLInputElement = document.getElementById('input-name') as HTMLInputElement;
+        const inputEmail: HTMLInputElement = document.getElementById('input-email') as HTMLInputElement;
+        const inputPhone: HTMLInputElement = document.getElementById('input-phone') as HTMLInputElement;
+        const inputMsg: HTMLInputElement = document.getElementById('input-msg') as HTMLInputElement;
+
+        return {
+            name: inputName.value,
+            email: inputEmail.value,
+            phone: inputPhone.value,
+            message: inputMsg.value,
+            'g-recaptcha-response': recaptcha
+        }
+    }
+    const onChangeCaptcha = (value: string | null) => {
+        setRecaptchaValue(value ?? "")
+    }
+
     return (
         <section id='contact' className="container mx-auto text-center py-3 mb-12">
             <div className="max-w-screen-xl my-5 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
@@ -10,7 +132,7 @@ const ContantSection = () => {
                     <div>
                         <h2 className="text-4xl lg:text-5xl font-bold leading-tight"> Solicita tu prueba </h2>
                         <div className="text-gray-700 mt-8">
-                           Indícanos tu <span className="underline">email o teléfono</span> para que pruebes con nosotros. 
+                            Indícanos tu <span className="underline">email o teléfono</span> para que pruebes con nosotros.
                         </div>
                     </div>
                     <div className="mt-8 text-center">
@@ -255,26 +377,44 @@ const ContantSection = () => {
                         </svg>
                     </div>
                 </div>
-                <div  className='text-left'>
+                <div className='text-left'>
                     <div>
                         <span className="uppercase text-left text-sm text-gray-600 font-bold">Nombre</span>
-                        <input className="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" />
+                        <input id="input-name" className="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" />
+                        <small id='error-input-name' className='text-red-600'> </small>
                     </div>
                     <div className="mt-8">
                         <span className="uppercase text-sm text-gray-600 font-bold">Email</span>
-                        <input className="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" />
+                        <input id="input-email" className="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" />
+                        <small id='error-input-email' className='text-red-600'></small>
+
                     </div>
                     <div className="mt-8">
                         <span className="uppercase text-sm text-gray-600 font-bold">Telefono</span>
-                        <input className="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" />
+                        <input id="input-phone" className="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" />
+                        <small id='error-input-phone' className='text-red-600'></small>
+
                     </div>
                     <div className="mt-8">
                         <span className="uppercase text-sm text-gray-600 font-bold">Mensaje</span>
-                        <textarea className="w-full h-32 bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" defaultValue={""} />
+                        <textarea id="input-msg" className="w-full h-32 bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" defaultValue={""} />
                     </div>
-                    <div className="mt-8">
-                        <button className="uppercase text-sm font-bold tracking-wide bg-primary-color text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                    <div className='my-5'>
+                        <ReCAPTCHA
+                            sitekey="6LcvO9MgAAAAAJSzeiLt-45wa_HROU7lm9k5PiTM"
+                            onChange={(value: string | null) => onChangeCaptcha(value)}
+                        />
+                    </div>
+                    <div className="">
+                        <div className='my-2'>
+                            <small id='error-input-phone-email' className='text-red-600 '></small>
+                        </div>
+                        <button id="btn-send" onClick={sendEmail} className="uppercase text-sm font-bold tracking-wide bg-primary-color text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                             Enviar
+                        </button>
+
+                        <button id="btn-success" className="uppercase text-sm font-bold tracking-wide bg-green-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hidden">
+                            Mensaje Enviado con Éxito
                         </button>
                     </div>
                 </div>
