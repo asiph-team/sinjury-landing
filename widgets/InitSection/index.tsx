@@ -6,7 +6,7 @@ import RightContent from './rigthContent'
 const InitSection = () => {
   return (
     <div className="pt-24 gradient ">
-      <div className="container px-3 mx-auto  flex flex-wrap flex-col md:flex-row items-center">
+      <div className="container px-3 mx-auto py-10 flex flex-wrap flex-col md:flex-row items-center">
         <LeftContent
           upperText=""
           mainText="SINJURY"
