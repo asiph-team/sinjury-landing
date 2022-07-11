@@ -1,16 +1,23 @@
 import Image, { StaticImageData } from 'next/image'
 
 interface Props{
-    image: StaticImageData;
+  image: StaticImageData;
+  image2: StaticImageData;
 
 }
-const RightContent = ({image}:Props) => {
+const RightContent = ({image,image2}:Props) => {
     return (
-        <div className="w-full md:w-3/5 py-6 text-center">
+      <div className='md:w-2/5  flex'>
+        <div className=" py-6 text-center">
               <Image
-                className="w-full md:w-4/5 "
                 src={image}
               ></Image>
+        </div>
+          <div className="py-6 text-center">
+                <Image
+                  src={image2}
+                ></Image>
+          </div>
         </div>
     )
   }

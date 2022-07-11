@@ -3,7 +3,7 @@ import SecondRow from "./secondRow"
 import Image from 'next/image'
 import areas from "../../public/assets/img/areas.png"
 import action_plans from "../../public/assets/img/action_plans.png"
-import activities from "../../public/assets/img/activities.png"
+import activities from "../../public/assets/img/sinjury-app-detail.png"
 
 import employees from "../../public/assets/img/employees.png"
 import indicadorGlobal from "../../public/assets/img/indicador_global.png"
@@ -12,6 +12,8 @@ import supervisor from "../../public/assets/img/supervision.png"
 import training from "../../public/assets/img/trainings.png"
 import workstation from "../../public/assets/img/workstation.png"
 import { AnimationOnScroll } from "react-animation-on-scroll"
+import Link from "next/link"
+
 
 interface Props {
   title: string;
@@ -22,17 +24,17 @@ const ResumenModelSinjury = ({ title }: Props) => {
     <section className="bg-white py-8">
       <div className="container max-w-5xl mx-auto m-8">
         <div className="my-10">
-        <div className="w-full mb-4">
-        </div>
-        <div className='p-3  text-gray-600 mb-8 mt-5'>
-     
-        </div>
-        
+          <div className="w-full mb-4">
+          </div>
+          <div className='p-3  text-gray-600 mb-8 mt-5'>
+
+          </div>
+
         </div>
         <h1 className="w-full my-2 mt-5 text-4xl font-bold leading-tight text-center text-gray-800">
-          Administra 
+          Administra
         </h1>
-        
+
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
         </div>
@@ -45,10 +47,10 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-            <Image
-             quality={10}
-              src={areas}
-            />
+          <Image
+            quality={10}
+            src={areas}
+          />
         </FirstRow>
         <SecondRow
           title="Puestos de trabajo"
@@ -60,9 +62,9 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=''
         >
-            <Image
-              src={workstation}
-            />
+          <Image
+            src={workstation}
+          />
         </SecondRow>
         <FirstRow
           title="Trabajadores"
@@ -72,14 +74,14 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-            <Image
-              src={employees}
-            />
+          <Image
+            src={employees}
+          />
         </FirstRow>
 
         <SecondRow
           title="Inventario de riesgos de actividades"
-
+          useShadow={false}
           descriptions={[
             'Crea actividades, asignando las medidas de control que el trabajador debe utilizar',
             'El trabajador debe seleccionar la actividad que va a realizar, para verificar de forma efectiva las medidas de control.',
@@ -90,10 +92,12 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
+          <div className="w-3/5">
             <Image
               src={activities}
             />
-                  </SecondRow>
+          </div>
+        </SecondRow>
         <h1 className="w-full mt-20 my-2 text-4xl font-bold leading-tight text-center text-gray-800">
           Controla las medidas Prevención
         </h1>
@@ -110,10 +114,10 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-            <Image
-              src={training}
-            />
-                  </FirstRow>
+          <Image
+            src={training}
+          />
+        </FirstRow>
         <SecondRow
           title="Vigilancia médica"
 
@@ -123,10 +127,10 @@ const ResumenModelSinjury = ({ title }: Props) => {
             'Administra el cumplimiento de los programas de vigilancia médica por áreas, puestos de trabajo y trabajadores.',
           ]} footer=''
         >
-            <Image
-              src={vigilancia_medica}
-            />
-                 </SecondRow>
+          <Image
+            src={vigilancia_medica}
+          />
+        </SecondRow>
 
         <FirstRow
           title="Planes de acción"
@@ -138,10 +142,10 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-            <Image
-              src={action_plans}
-            />
-                  </FirstRow>
+          <Image
+            src={action_plans}
+          />
+        </FirstRow>
         <SecondRow
           title="Supervisión"
           descriptions={[
@@ -151,11 +155,11 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]}
           footer=""
         >
-            <Image
-              src={supervisor}
-            />
-                  </SecondRow>
-          
+          <Image
+            src={supervisor}
+          />
+        </SecondRow>
+
         <h1 className="w-full my-2  mt-20  text-4xl font-bold leading-tight text-center text-gray-800">
           Desempeño Global
         </h1>
@@ -177,22 +181,30 @@ const ResumenModelSinjury = ({ title }: Props) => {
         </div>
         <div>
           <div className="flex w-full  justify-center items-center">
-        <div className="w-4/5 p-6 mt-6">
-      <AnimationOnScroll
-    animateOnce={true}
-    duration={0.5}
-    animateIn="animate__slideInUp">
+            <div className="w-4/5 p-6 mt-6">
+              <AnimationOnScroll
+                animateOnce={true}
+                duration={0.5}
+                animateIn="animate__slideInUp">
                 <div className="shadow-2xl rounded-lg">
 
 
-                <Image
-              src={indicadorGlobal}
-            />
-                          </div>
-        </AnimationOnScroll>
+                  <Image
+                    src={indicadorGlobal}
+                  />
+                </div>
+              </AnimationOnScroll>
+            </div>
+          </div>
+          <div className="w-full flex justify-center text-center">
+      <Link href="/#contact">
+
+        <button className="mx-auto lg:mx-0 hover:underline bg-primary-color text-white font-bold rounded-full my-6 py-4 px-20 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ">
+        Contáctanos
+        </button>
+        </Link>
       </div>
         </div>
-      </div>
       </div>
     </section>
   )

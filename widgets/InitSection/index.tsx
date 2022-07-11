@@ -1,4 +1,5 @@
-import mypic from '../../public/assets/img/hero.png'
+import mypic from '../../public/assets/img/sinjury-app.png'
+import mypic2 from  '../../public/assets/img/sinjury-app-list.png'
 import LeftContent from './leftContent'
 import RightContent from './rigthContent'
 
@@ -11,7 +12,7 @@ const InitSection = () => {
           mainText="SINJURY"
           bottomText="La solución móvil y web para Prevención de Riesgos"
           buttonText="Contáctanos" />
-        <RightContent image={mypic} />
+        <RightContent image={mypic} image2={mypic2} />
       </div>
     </div>
   )
