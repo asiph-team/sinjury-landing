@@ -11,11 +11,13 @@ const RightContent = ({image,image2}:Props) => {
         <div className=" py-6 text-center">
               <Image
                 src={image}
+                priority={true}
               ></Image>
         </div>
           <div className="py-6 text-center">
                 <Image
                   src={image2}
+                  priority={true}
                 ></Image>
           </div>
         </div>

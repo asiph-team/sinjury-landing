@@ -48,6 +48,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           footer=""
         >
           <Image
+            priority={true}
             quality={10}
             src={areas}
           />
@@ -63,6 +64,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           footer=''
         >
           <Image
+            priority={true}
             src={workstation}
           />
         </SecondRow>
@@ -75,6 +77,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           footer=""
         >
           <Image
+            priority={true}
             src={employees}
           />
         </FirstRow>
@@ -94,6 +97,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
         >
           <div className="w-3/5">
             <Image
+              priority={true}
               src={activities}
             />
           </div>
@@ -115,6 +119,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           footer=""
         >
           <Image
+            priority={true}
             src={training}
           />
         </FirstRow>
@@ -128,6 +133,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           ]} footer=''
         >
           <Image
+            priority={true}
             src={vigilancia_medica}
           />
         </SecondRow>
@@ -143,6 +149,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           footer=""
         >
           <Image
+            priority={true}
             src={action_plans}
           />
         </FirstRow>
@@ -156,6 +163,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
           footer=""
         >
           <Image
+            priority={true}
             src={supervisor}
           />
         </SecondRow>
@@ -190,6 +198,7 @@ const ResumenModelSinjury = ({ title }: Props) => {
 
 
                   <Image
+                    priority={true}
                     src={indicadorGlobal}
                   />
                 </div>
@@ -197,13 +206,13 @@ const ResumenModelSinjury = ({ title }: Props) => {
             </div>
           </div>
           <div className="w-full flex justify-center text-center">
-      <Link href="/#contact">
+            <Link href="/#contact">
 
-        <button className="mx-auto lg:mx-0 hover:underline bg-primary-color text-white font-bold rounded-full my-6 py-4 px-20 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ">
-        Contáctanos
-        </button>
-        </Link>
-      </div>
+              <button className="mx-auto lg:mx-0 hover:underline bg-primary-color text-white font-bold rounded-full my-6 py-4 px-20 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ">
+                Contáctanos
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

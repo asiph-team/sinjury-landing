@@ -10,6 +10,7 @@ const RightContent = ({image}:Props) => {
               <Image
                 className="w-full md:w-4/5"
                 src={image}
+                priority={true}
               ></Image>
         </div>
     )
