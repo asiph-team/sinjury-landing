@@ -16,7 +16,8 @@
     "react": "18.1.0",
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "18.1.0",
-    "react-google-recaptcha": "^2.1.0"
+    "react-google-recaptcha": "^2.1.0",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
