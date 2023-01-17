@@ -1,11 +1,9 @@
 import type { NextPage } from 'next'
 import { Separator } from '../components/Separator'
 import InitModelSinjury from '../widgets/InitModelSinjury'
-import InitSection from '../widgets/InitSection'
 import PageFooter from '../widgets/pageFooter'
 import PageHeader from '../widgets/pageHeader'
 import ResumenModelSinjury from '../widgets/ResumenModelSinjury'
-import ResumenSection from '../widgets/ResumeSection'
 
 const Sinjury: NextPage = () => {
   const pageIndex = 2;
@@ -26,7 +24,7 @@ const Sinjury: NextPage = () => {
           colorPrimary='#1b5e7d'
           colorSecundary='#4a5593'
         />
-        <PageFooter></PageFooter>
+        <PageFooter />
 
       </div>
 

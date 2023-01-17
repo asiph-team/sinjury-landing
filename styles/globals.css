@@ -10,4 +10,4 @@
 
 .gradient {
     background: linear-gradient(90deg, var(--main-bg-color) 0%, var(--secondary-bg-color) 100%);
-  }
+}

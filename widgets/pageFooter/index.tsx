@@ -40,7 +40,11 @@ const PageFooter = () => {
     </div>
   </div>
   <div className="text-center p-4" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
-  <a className="text-whitehite" href="https://tailwind-elements.com/">Sinjury</a>
+  <div className="flex justify-center flex-col">
+    <a className="text-whitehite mb-4" href="/politicas">Políticas de privacidad</a>
+    <a className="text-whitehite mb-4" href="/politicas">Términos y condiciones de uso</a>
+    <a className="text-whitehite font-bold" href="/">Sinjury</a>
+  </div>
   </div>
 </footer>
 
